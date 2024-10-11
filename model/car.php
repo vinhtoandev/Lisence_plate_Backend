@@ -91,4 +91,20 @@ class Car
         printf("Error: %s.\n", $stmt->error);
         return false;
     }
+    public function delete()
+    {
+
+        $query = "DELETE FROM car WHERE id_car=:id_car";
+        $stmt = $this->conn->prepare($query);
+
+        $this->id_car = htmlspecialchars(strip_tags($this->id_car));
+
+        $stmt->bindParam(':id_car', $this->id_car);
+
+        if ($stmt->execute()) {
+            return true;
+        }
+        printf("Error: %s.\n", $stmt->error);
+        return false;
+    }
 }

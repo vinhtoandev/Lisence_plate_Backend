@@ -11,7 +11,7 @@ $connect = $db->connect();
 $car = new Car($connect);
 $read = $car->read();
 
-$num = $read->rowCount(); // Số lượng dòng kết quả
+$num = $read->rowCount();
 
 if ($num > 0) {
     $car_array = [];
