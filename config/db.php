@@ -5,7 +5,7 @@
         private $servername = 'localhost:3307';
         private $username = 'root';
         private $password = '';
-        private $db = 'e_ecommerce';
+        private $db = 'license_plate';
         private $conn;
         public function connect() {
             $this->conn = null;
